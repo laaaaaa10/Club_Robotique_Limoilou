@@ -1,0 +1,28 @@
+Drive
+Drive (lentement)
+Petit multiplicateur
+Grand multiplicateur
+Ramasser 1 ballon/monter élévateur d'une coche/lancer 1 ballon
+Lancer ballons en continu
+
+
+Contrôles:
+    - Drive
+        - Pleine vitesse: Joystick gauche
+        - Basse vitesse: D-Pad ou Joystick gauche en tenant A enfonçé
+    - Élévateur
+        Sert à ramasser ballons et/ou lancer ballons ou poser sur le multiplicateur
+        - Faire tourner d'une coche automatiquement
+            - En montant: RB (bouton épaule droite)
+                Sert à ramasser et/ou lancer 1 ballon
+            - En descendant: LB (bouton épaule gauche)
+                Sert à automatiquement poser un ballon sur le multiplicateur une fois positionné
+        - Faire tourner en continu
+            Même chose mais contrôle analogique manuel
+            - En montant: RT (gâchette droite)
+            - En descendant: LT (gâchette gauche)
+    - Lanceur
+        Le lanceur se fait "nourrir" par l'élévateur. Il n'y a pas d'autre mécanisme
+        qui controle l'accès des ballons au lanceur. Il faut faire spinner le lanceur
+        avant d'y donner des ballons.
+        - Faire spinner le lanceur: X (ça spin tant que X est enfoncé)

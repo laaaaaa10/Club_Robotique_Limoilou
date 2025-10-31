@@ -1,0 +1,16 @@
+#KEYWORD	KEYWORD_TOKENTYPE	REFERENCE_LINK	RSYNTAXTEXTAREA_TOKENTYPE
+
+# Datatypes (KEYWORD1)
+GPSPCallBack KEYWORD1 
+GPSP KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+defineCommand KEYWORD2
+update KEYWORD2
+
+# Structures (KEYWORD3)
+Command KEYWORD3
+
+# Instances (KEYWORD2)
+
+# Constants (LITERAL1)
