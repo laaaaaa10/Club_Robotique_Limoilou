@@ -205,16 +205,17 @@ void controlArm() {
     if (upwards && LastArmState != TOP) { 
         LastArmState = TOP; 
         arm_damp_tmr = millis();
+        armArrived = true;
     }  
     // arm reached halway
     if (halfways && LastArmState != HALFWAY) { 
         LastArmState = HALFWAY;
-        armArrived = true;
+        //armArrived = true;
     }
     // arm reached bottom
     if (downwards && LastArmState != BOTTOM) { 
         LastArmState = BOTTOM;
-        armArrived = true;
+        //armArrived = true;
     }
 
 
@@ -225,7 +226,7 @@ void controlArm() {
         case TOP:
             if (LastArmState == TOP) { break; }
             if (!upwards) {
-                armSpeed = (LastArmState == TOP) ? -75 : 75;
+                armSpeed = (LastArmState == HALFWAY) ? 75 : -75;
             }
         break;
 
@@ -237,8 +238,8 @@ void controlArm() {
                 armSpeed = 0;
             }
             // activates the dampers once target was reached, bounced back through TOP, and 750ms passed
-            else if (armArrived && LastArmState == TOP && millis() - arm_damp_tmr > 150) {
-                armSpeed = 10;                                          
+            else if (armArrived && LastArmState == TOP && millis() - arm_damp_tmr > 250) {
+                armSpeed = 7.5;                                          
             }
             else {
                 armSpeed = -100;  // still traveling at full speed
@@ -253,8 +254,8 @@ void controlArm() {
                 armSpeed = 0;
             }
             // activates the dampers once target was reached, bounced back through TOP, and 750ms passed
-            else if (armArrived && LastArmState == TOP && millis() - arm_damp_tmr > 150) {
-                armSpeed = -10; 
+            else if (armArrived && LastArmState == TOP && millis() - arm_damp_tmr > 125) {
+                armSpeed = -6;
             }
             else {
                 armSpeed = 100;  // still traveling at full speed
