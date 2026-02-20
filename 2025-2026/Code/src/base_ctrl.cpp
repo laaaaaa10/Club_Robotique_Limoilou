@@ -64,8 +64,8 @@ void verifieCommandeDriveJoy() {
     
     // Crawl mode pour X et Y (identique dans les deux modes)
     if (manette.l3) {
-        driveSpeed.x = steering / 3;
-        driveSpeed.y = forward_back / 5;
+        driveSpeed.x = steering / 5;
+        driveSpeed.y = forward_back / 7;
     } else {
         driveSpeed.x = steering;
         driveSpeed.y = forward_back;

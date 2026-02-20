@@ -1,2 +1,46 @@
-.pio
-.idea
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Build output
+.build/
+libdeps/
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Python cache (PlatformIO utilise python)
+__pycache__/
+*.pyc
+
+# C/C++ compiled
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+
+# Upload artifacts
+firmware.bin
+firmware.hex
+
+# Local env config (optionnel — utile en équipe)
+platformio_override.ini
