@@ -77,6 +77,12 @@ Ensuite;
 
 `git add programmers.txt`
 
+Pour vérifier si le fichier est prêt à être commit:
+
+`git status`
+
+Ensuite;
+
 `git commit -m "premier commit de {Prénom Nom}"`
 
 `git push origin main`
@@ -115,14 +121,14 @@ Finalement, ouvrir github et faire une pull request depuis votre fork.
 
 `git commit -m "{message}"`
 
-### Clone
-
-`git clone {SSH}`
-
 **Important**: Choisir un message clair, simple et au présent. Utiliser l'anglais.
 Ex: "Correct typos in GIT_TUTORIAL"
 
 Si un message long est nécessaire: [cliquez_ici](https://youtu.be/8JJ101D3knE?t=1546)
+
+### Clone
+
+`git clone {SSH}`
 
 ### Gitignore
 
