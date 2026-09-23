@@ -55,11 +55,11 @@ Dans le terminal:
 
 Le SSH est dans 'Code' sur votre fork.
 
-`git remote add {SSH original}`
+`git remote add upstream {SSH original}`
 
 ... ou simplement;
 
-`git remote add git@github.com:obr-code/Club_Robotique_Limoilou.git`
+`git remote add upstream git@github.com:obr-code/Club_Robotique_Limoilou.git`
 
 ### Faire une première Pull Request
 
