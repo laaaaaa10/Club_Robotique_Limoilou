@@ -71,11 +71,11 @@ Mettre à jour votre branche avec la version locale du repository original:
 
 `git merge upstream/main`
 
-Testez votre configuration en ouvrant 'programmers.txt' et en y rajoutant votre nom et prénom.
+Testez votre configuration en ouvrant '2026-2027/programmers.txt' et en y rajoutant votre nom et prénom.
 
 Ensuite;
 
-`git add programmers.txt`
+`git add 2026-2027/programmers.txt`
 
 Pour vérifier si le fichier est prêt à être commit:
 
