@@ -32,7 +32,7 @@
 #define LS_GRABBER_CLOSED CRC_DIG_7     // Grabbers closed     
 #define OPEN 1
 #define CLOSED 0
-#define CLOSING_TIME 1200  // ammound of time (in ms) to close befor it start forcing less
+#define CLOSING_TIME 1200  // ammound of time (in ms) to close before it start forcing less
 
 
 //=========================== VARIABLES ========================//
@@ -90,7 +90,7 @@ void controlElevateur() {
         elevateurSpeed = 50; // move down
     }
     else {
-        elevateurSpeed = -10; // notihn
+        elevateurSpeed = -10; // nothing
     }
 }
 
