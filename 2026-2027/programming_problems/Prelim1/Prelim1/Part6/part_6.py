@@ -21,54 +21,13 @@ def solve(cookies: list[tuple[float, float, float]]) -> bool:
     answer = True   # starter value / valeur de départ
     ### YOUR CODE GOES HERE ###
     ### VOTRE CODE VA ICI ###
-    
-    # Native python doesn't have any automatically sorted data structures... 
-    def binary_search(sorted_list: list, x) -> int:
-            if len(sorted_list) < 2:
-                if (sorted_list[0] < x):
-                    return 1
-                else:
-                    return 0
-            else:
-                l, r = 0, len(sorted_list)
-                while (l < r):
-                    i = (l+r) >> 1
-                    if   (x < sorted_list[i]): l = i+1
-                    elif (x > sorted_list[i]): r = i+1
-                    else: l, r = i, i
-                if (sorted_list[l] < x):
-                    if l == len(sorted_list):
-                        return l
-                    else:
-                        return l+1
-                else:
-                    return l
-            
-    def binary_insert(sorted_list: list, x):
-        i = binary_search(sorted_list, x)
-        if (i == len(sorted_list)):
-            sorted_list.append(x)
-        else:
-            sorted_list.insert(i, x)
-
-    sorted_list_x = []
-    for idx in range(0, len(cookies)):
-        x1 = cookies[idx][0] - cookies[idx][2]
-        x2 = cookies[idx][0] + cookies[idx][2]
-        binary_insert(sorted_list_x, (x1, idx, True)) # (_, _, 0); is start
-        binary_insert(sorted_list_x, (x2, idx, False)) # (_, _, 1); is end
-
-    sorted_list_y1 = []
-    sorted_list_y2 = []
-    for (_, idx, start) in sorted_list_x:
-        y1 = cookies[idx][1] - cookies[idx][2]
-        y2 = cookies[idx][1] + cookies[idx][2]
-        if start:  
-            binary_insert(sorted_list_y1, y1)
-            binary_insert(sorted_list_y2, y2)
-        else:
-            sorted_list_y1.debinary_search(sorted_list_y1, y1)
-            binary_search(sorted_list_y2, y2)
+    for i1 in range(0, len(cookies)):
+        for i2 in range(i1+1, len(cookies)):
+            a = abs(cookies[i1][0] - cookies[i2][0])
+            b = abs(cookies[i1][1] - cookies[i2][1])
+            hypothenuse = math.sqrt(a**2 + b**2)
+            if ((cookies[i1][2] + cookies[i2][2]) >= hypothenuse):
+                return False
 	
 
     return answer
