@@ -23,13 +23,13 @@ def solve(cookies: list[str], username: str, random_text: str) -> str:
     answer = ""   # starter value / valeur de départ
     ### YOUR CODE GOES HERE ###
     ### VOTRE CODE VA ICI ###
-    iterator = filter(lambda c: c[0:5] == username[0:5], cookies)
-    match next(iterator, None):
-        case None: 
-            answer = username[0:5] + random_text
-        case cookie:
+    for cookie in cookies:
+        if cookie[0:5] == username[0:5]:
             answer = cookie
-
+            return answer
+        
+	# If no cookie found
+    answer = username[0:5] + random_text
     return answer
 
 
